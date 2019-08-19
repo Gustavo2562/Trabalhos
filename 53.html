@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>53</title> 
+</head>
+<body>
+</body>
+    
+
+    <script type="text/javascript">
+            var Aluno = function(){
+            this.nome  = null;
+            this.nota1 = null;
+            this.nota2 = null;
+            this.nota3 = null;
+            this.nota4 = null;
+            this.media = null;
+            this.calcularMedia=function(a1){
+            return (a1.nota1+a1.nota2+a1.nota3+a1.nota4) / 2;
+        }
+    }
+        a1 = new Aluno();
+        a1.nome = prompt("Digite o nome do aluno");
+        a1.nota1 = parseFloat(prompt("Digite a nota 1"));
+        a1.nota2 = parseFloat(prompt("Digite a nota 2"));
+        a1.nota3 = parseFloat(prompt("Digite a nota 3"));
+        a1.nota4 = parseFloat(prompt("Digite a nota 4"));
+        a1.media = a1.calcularMedia(a1);
+        console.log(a1);
+    if(a1.media >=5){
+        alert("Aluno(a): " + a1.nome + " aprovado com" + " média " + a1.media);
+    }else{
+        alert("Aluno(a): " + a1.nome + " reprovado com" + " média " + a1.media);
+    }
+    </script>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Escrever um algoritmo para ler três valores inteiros e
+        escrever na tela o maior e o menor deles. Considere que
+        todos os valores são diferentes.</h1>
+        
+        
+        <P>Valor 1:<input type="number" id="valor1"></P>
+        <P>Valor 2:<input type="number" id="valor2"></P>
+        <P>Valor 3:<input type="number" id="valor3"></P>
+        <p><button onclick="verifica()">OK</button></p>
+
+     <div id = "menor"></div> <!-- classificar o menor valor para que reposta apareça na pagina e nao
+    usando o alert -->
+    <div id = "maior"></div> <!-- classificar o maior valor para que reposta apareça na pagina e nao
+        usando o  alert -->
+
+</body>
+
+<script type="text/javascript">
+    function verifica(){
+            let v1 = document.getElementById("valor1").value; // (let) declara as variaveis que vc escolhe 
+            let v2 = document.getElementById("valor2").value;
+            let v3 = document.getElementById("valor3").value;
+             if (v1 > v2 && v1 > v3){
+                document.querySelector("#maior").innerHTML ="O maior valor é " + v1 //comando para aparecer na pagina ( document.querySelector("#maior").innerHTML)
+             }
+             if(v2 > v1 && v2 > v3){
+                document.querySelector("#maior").innerHTML ="O maior valor é " + v2
+             }
+             if(v3 > v1 && v3 > v2){
+                document.querySelector("#maior").innerHTML ="O maior valor é " + v3
+             }
+             if(v1 < v2 && v1 < v3){
+                document.querySelector("#menor").innerHTML ="O menor valor é " + v1
+             }
+             if(v2 < v1 && v2 < v3){
+                document.querySelector("#menor").innerHTML ="O menor valor é " + v2
+             }
+             if(v3 < v1 && v3 < v2){
+                document.querySelector("#menor").innerHTML ="O menor valor é " + v3
+             }           
+    }
+</script>
+
+</html>
