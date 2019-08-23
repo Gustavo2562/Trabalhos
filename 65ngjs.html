@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+</head>
+<body ng-app="ex65" ng-controller="ctrl65">
+            <input type="number" ng-model="salario" placeholder=" Informe o salário "><p>
+            <input type="number" ng-model="financiamento" placeholder=" Informe o valor do financiamento "><p>
+
+            
+
+            <label ng-if="salario" ng-if"salario" ng-model="tt">{{saida()}}</label><p></p>
+            <label ng-if="salario" ng-if"financiamento" ng-model="ff">Financiamento maximo permitido = {{5*salario}}</label><p></p>
+            
+                    
+</body>
+</html>
+    <script>
+        var app = angular.module('ex65', []);
+    app.controller("ctrl65", function($scope){
+        $scope.saida = function(nu){
+            n1 = $scope.salario;
+            n2= $scope.financiamento;
+            n3 = n1*5
+            if(n2 <= n3){
+                return"Financiamento aprovado "              
+            }
+            return"Financiamento negado" 
+    
+        }})
+</script>

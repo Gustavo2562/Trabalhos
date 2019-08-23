@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+</head>
+<body ng-app="ex62" ng-controller="ctrl62">
+            <input type="number" ng-model="nu1" placeholder=" Numero 1 "><p>
+            <input type="number" ng-model="nu2" placeholder=" Numero 2 "><p>
+
+            <label ng-if="nu1" ng-if"nu2">Soma = {{nu1 + nu2}}</label><p></p>
+            <label ng-if="nu1" ng-if"nu2">Subtração = {{nu1 - nu2}}</label><p></p>
+            <label ng-if="nu1" ng-if"nu2">Multiplicação = {{nu1 * nu2}}</label><p></p>
+            <label ng-if="nu1" ng-if"nu2">Divisão = {{nu1 / nu2}}</label><p></p>
+                    
+</body>
+</html>
+    <script>
+        var app = angular.module('ex62', []);
+    app.controller("ctrl62", function($scope){
+        $scope.saida = function(nu){}})
+</script>

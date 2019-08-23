@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+</head>
+<body ng-app="ex66" ng-controller="ctrl66">
+        
+        
+            
+                    
+</body>
+</html>
+    <script>
+        var app = angular.module('ex66', []);
+    app.controller("ctrl66", function($scope){
+        $scope.saida = function(nu){
+            
+            if( poluicao <= parseFloat(0.25)){
+                return "Indice aceitavel "              
+            }if (poluicao = parseFloat(0.30)){
+                return "Parar grupo 1"
+            }if (poluicao = parseFloat(0.40)){
+                return "Parar grupo 1 e 2"
+            }if (poluicao = parseFloat(0.50)){
+                return "Parar todos os grupos"
+            } 
+        }})
+</script>
