@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>74</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-sanitize.js"></script>
+</head>
+
+<h2>Faça um algoritmo, em javascript, que conte de 1 a 100 e
+a cada múltiplo de 10 emita uma mensagem: “Múltiplo de 10”.</h2>
+
+
+<body ng-app="ex74" ng-controller="ctrl74">
+    <input type="number" ng-model="alfa" placeholder="Digite o numero desejado"><p></p>
+    <input type="number" ng-model="ultimo" placeholder="Digite 100"><p></p>
+    <input type="number" ng-model="multiplos" placeholder="Multiplo"><p></p>
+    
+    <div ng-bind-html="saida(multiplos, alfa, ultimo)"></div>
+</body>
+
+</html>
+<script>
+                var app = angular.module('ex74', ['ngSanitize']);
+                app.controller("ctrl74", function ($scope, $sce) {
+                $scope.saida = function (multiplos, alfa, ultimo) {
+                let result = "";
+        for ( num = alfa; num <= ultimo; num++) {
+        if (num % multiplos == 0) { 
+        result += "<p>" + num + " Esse número é múltiplo de " + multiplos + "</p>"; 
+         // += (em vez de A = A + 4) podemos usar (A += 4) diminuindo o tamanho
+        } else {
+         result += "<p>" + num + "</p>"
+         }
+         }
+        return $sce.trustAsHtml(result) 
+        // posso tentar usar o ( $scope.trustedHtml = $sce.trustAsHtml ) mas nao notei diferenca  
+        // $sce tem que ser colocado no controlador se nao ($sce undefined)
+    }
+})
+</script>
