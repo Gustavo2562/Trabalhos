@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>76</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-sanitize.js"></script>
+</head>
+
+
+<h1>Construa um algoritmo, em javascript, que leia 10 valores inteiros e positivos, 
+    e que encontre o maior valor, menor valor e calcular a média de todos os numeros:
+</h1>
+
+
+
+<body ng-app="ex76" ng-controller="ctrl76">
+
+                                    <input type="number" ng-model="numero1" placeholder="Numero 1">
+                                <input type="number" ng-model="numero2" placeholder="Numero 2">
+                            <input type="number" ng-model="numero3" placeholder="Numero 3">
+                        <input type="number" ng-model="numero4" placeholder="Numero 4">
+                    <input type="number" ng-model="numero5" placeholder="Numero 5"><p></p> <!--Alinhar-->
+                <input type="number" ng-model="numero6" placeholder="Numero 6">
+            <input type="number" ng-model="numero7" placeholder="Numero 7">
+        <input type="number" ng-model="numero8" placeholder="Numero 8">
+    <input type="number" ng-model="numero9" placeholder="Numero 9">
+<input type="number" ng-model="numero10" placeholder="Numero 10">
+
+
+ <div ng-model="result" ng-if="numero10">{{saida()}}</div><p></p>
+
+
+
+<script>
+    
+var app = angular.module('ex76', []);
+app.controller("ctrl76", function($scope){
+$scope.saida = function(){
+
+    num1 = $scope.numero1;
+        num2 = $scope.numero2;
+             num3 = $scope.numero3;
+                num4 = $scope.numero4;
+                    num5 = $scope.numero5;
+                        num6 = $scope.numero6;
+                             num7 = $scope.numero7;
+                                 num8 = $scope.numero8;
+                                     num9 = $scope.numero9;
+                                        num10 = $scope.numero10;
+
+var i = [num1,num2,num3,num4,num5,num6,num7,num8,num9,num10]; // identificar cada numero 
+var maiornumero = Math.max.apply(undefined, i); // posso usar "math" 2 vezes na mesma linha sem problema
+var menornumero = Math.min.apply(undefined, i);
+var n = (num1+num2+num3+num4+num5+num6+num7+num8+num9+num10) 
+/1 
+0; // 1 e 0 da variavel (n) obs n colocar na mesma linha
+        
+ return "Maior número: " + maiornumero + "  Menor número: " + menornumero + "  Media total de: " + n;
+             
+  }
+})
+</script>
+</body>
+</html>
